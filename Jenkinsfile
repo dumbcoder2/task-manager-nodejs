@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Code checked out from GitHub'
+                echo 'Checking out source code'
+                checkout scm
             }
         }
 
@@ -14,9 +15,15 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Build Docker Image') {
             steps {
-                sh 'npm test'
+                sh 'docker build -t task-manager-app:latest .'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'docker compose up -d --build'
             }
         }
     }
