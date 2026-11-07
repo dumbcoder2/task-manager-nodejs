@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checking out Task Manager project'
+                echo 'Code checked out from GitHub'
             }
         }
 
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
-                echo 'Building Node.js application'
+                sh 'npm install'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests'
+                sh 'npm test'
             }
         }
     }
