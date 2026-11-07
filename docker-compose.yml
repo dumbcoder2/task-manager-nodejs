@@ -1,0 +1,36 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: task-manager-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: taskroot123
+      MYSQL_DATABASE: task_manager
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: task-manager-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: taskroot123
+      DB_NAME: task_manager
+      DB_PORT: 3306
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  mysql_data:
