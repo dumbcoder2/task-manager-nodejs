@@ -41,19 +41,19 @@ Demonstration of the working Task Manager application.
 ## 📸 Project Screenshots
 
 ### 1. Website Output
-![Website Output](./images/website-output.png)
+![Website Output](./c:\Users\Nikhil\OneDrive\Pictures\Screenshots 1\Screenshot 2026-11-06 124544.png/website-output.png)
 
 ### 2. Application Working
-![Application Working](./images/application-working.png)
+![Application Working](./c:\Users\Nikhil\OneDrive\Pictures\Screenshots 1\Screenshot 2026-11-06 124604.png/application-working.png)
 
 ### 3. Database
-![Database](./images/database.png)
+![Database](./c:\Users\Nikhil\OneDrive\Pictures\Screenshots 1\Screenshot 2026-11-06 125917.png/database.png)
 
 ### 4. Jenkins Deployment
-![Jenkins Deployment](./images/jenkins-deployment.png)
+![Jenkins Deployment](./c:\Users\Nikhil\OneDrive\Pictures\Screenshots 1\Screenshot 2026-11-07 213100.png/jenkins-deployment.png)
 
 ### 5. Jenkins Smoke Test
-![Jenkins Smoke Test](./images/jenkins-smoke-test.png)
+![Jenkins Smoke Test](./c:\Users\Nikhil\OneDrive\Pictures\Screenshots 1\Screenshot 2026-11-07 211841.png/jenkins-smoke-test.png)
 ## ✨ Key Features
 
 - Automated CI/CD pipeline using Jenkins.
